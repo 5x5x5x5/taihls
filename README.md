@@ -49,10 +49,8 @@ See `back/reproducibility.md` for details.
 
 ## Publishing
 
-1. Replace the `PLACEHOLDER` GitHub URL/owner in `myst.yml` and the launch badges
-   in `content/1_a1-placeholder.md`.
-2. Push to `main`. In repo **Settings → Pages**, set **Source = GitHub Actions**.
-3. The workflow builds (executing the code) and publishes automatically.
+1. In repo **Settings → Pages**, set **Source = GitHub Actions**.
+2. Push to `main`. The workflow builds (executing the code) and publishes automatically.
 
 ## Authoring a new chapter
 

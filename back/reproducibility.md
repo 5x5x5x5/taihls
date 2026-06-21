@@ -28,7 +28,7 @@ real CPython with no browser limits.
 ## 3. Locally with `uv`
 
 ```bash
-git clone https://github.com/PLACEHOLDER/taihls
+git clone git@github.com:5x5x5x5/taihls.git
 cd taihls
 uv sync                              # exact versions from uv.lock
 uv run jupyter book start --execute  # serve + run the code

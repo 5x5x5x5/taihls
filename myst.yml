@@ -18,8 +18,7 @@ project:
   authors:
     - name: PLACEHOLDER Author
       email: placeholder@example.com
-  # PLACEHOLDER — replace OWNER/REPO with your GitHub repository.
-  github: https://github.com/PLACEHOLDER/taihls
+  github: https://github.com/5x5x5x5/taihls
   license:
     content: CC-BY-4.0
     code: MIT
@@ -28,8 +27,7 @@ project:
   # In-browser execution via JupyterLite/Pyodide — readers run code with no install.
   jupyter:
     lite: true
-  # Binder "launch" button (a full URL). PLACEHOLDER — set OWNER/REPO.
-  # The Colab/Binder badges in chapters are the other on-ramps.
-  binder: https://mybinder.org/v2/gh/PLACEHOLDER/taihls/HEAD
+  # Binder "launch" button. The Colab/Binder badges in chapters are other on-ramps.
+  binder: https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD
 site:
   template: book-theme

@@ -18,11 +18,10 @@ exercise with a hidden solution → key takeaways.
 
 <!-- Launch badges. JupyterLite (in-page) is the real zero-install path and is
      enabled site-wide in myst.yml; these badges are extra on-ramps.
-     PLACEHOLDER: replace OWNER/REPO once your repository exists.
      Note: the Colab badge works for .ipynb files; this book's chapters are .md
      code-cell files, so Colab is best-effort — JupyterLite or Binder is preferred. -->
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PLACEHOLDER/taihls/HEAD)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PLACEHOLDER/taihls)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls)
 
 ```{admonition} Learning objectives
 :class: note
