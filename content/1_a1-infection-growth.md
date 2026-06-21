@@ -1,18 +1,11 @@
 ---
-title: 'Chapter A1 — How fast does an infection grow? (exemplar)'
+title: 'Chapter A1 — How fast does an infection grow?'
 short_title: 'A1 · Exponential growth'
 # kernelspec is required for code cells to execute.
 kernelspec:
   name: python3
   display_name: Python 3
 ---
-
-<!--
-This chapter is the EXEMPLAR. It is fully written and it runs.
-Every other chapter is a stub. Copy this file's STRUCTURE — not its prose — when
-you write your own: objectives → example-first concept → small runnable code →
-exercise with a hidden solution → key takeaways.
--->
 
 # Chapter A1 — How fast does an infection grow?
 
