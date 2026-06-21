@@ -30,7 +30,7 @@ always ask:
 *What does the data actually look like?*
 
 Rushing past this question is how people get fooled. So this whole chapter is about
-slowing down and **looking** — the single most useful habit in all of data science.
+slowing down and **looking** — one of the most valuable habits in all of data science.
 
 ```{admonition} Definition — dataset
 :class: important
@@ -90,7 +90,7 @@ fig
 Look at the shape in [](#hist-progression). Most patients cluster at the lower,
 healthier end, and the bars trail off to the right — a long thin tail of patients
 whose disease advanced a lot. That lopsided shape has a name, and it changes how we
-should summarise the column.
+should summarize the column.
 
 ## Two ways to say "typical": mean and median
 
@@ -164,7 +164,7 @@ sketch of one column before we do anything fancier with it.
 :class: hint
 Pick the **body mass index** column, named `"bmi"`. Draw its histogram, then print its
 mean, median, and standard deviation. Is it skewed? (Note: in this dataset the feature
-columns have already been rescaled to centre near 0, so don't worry that the numbers
+columns have already been rescaled to center near 0, so don't worry that the numbers
 look small — the *shape* is what we're after.)
 ```
 
@@ -182,7 +182,7 @@ print(f"median {df['bmi'].median():.4f}")
 print(f"std    {df['bmi'].std():.4f}")
 ```
 
-The mean is essentially 0 (about `-0.0000`) because this column was pre-centred, and
+The mean is essentially 0 (about `-0.0000`) because this column was pre-centered, and
 the median sits a touch below it. The histogram again leans right — a few patients
 with high BMI form a tail — so this column is mildly **right-skewed**, just like the
 progression score.

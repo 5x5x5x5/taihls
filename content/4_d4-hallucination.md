@@ -8,9 +8,6 @@ kernelspec:
 
 # Chapter D4 — When AI makes things up
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls)
-
 ```{admonition} Learning objectives
 :class: note
 By the end of this chapter you will be able to:
@@ -171,7 +168,7 @@ less likely and easier to catch.
   [](3_e3-humans-in-the-loop.md).
 ```
 
-You can see this same behaviour in a *real* large model using the
+You can see this same behavior in a *real* large model using the
 [D3 companion notebook](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/d3-run-an-llm.ipynb):
 ask `distilgpt2` for a fact and watch it produce something fluent — and often wrong —
 with no signal that it is unsure.

@@ -9,16 +9,13 @@ kernelspec:
 
 # Chapter C4 — How models learn
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls)
-
 ```{admonition} Learning objectives
 :class: note
 By the end of this chapter you will be able to:
 - explain **gradient descent** as rolling downhill on a loss surface;
 - define **learning rate** and **epoch** in plain words;
 - watch a parameter step its way to the bottom of a loss valley in code;
-- recognise **overfitting** by comparing training and validation error as a model grows.
+- recognize **overfitting** by comparing training and validation error as a model grows.
 ```
 
 ## Start with a story
@@ -37,7 +34,7 @@ how almost every modern AI model learns.
 
 ```{admonition} Definition — gradient descent
 :class: important
-**Gradient descent** is a way to minimise a loss by repeatedly taking a small step in the
+**Gradient descent** is a way to minimize a loss by repeatedly taking a small step in the
 direction that goes *downhill* on the loss curve. Stand on the slope, feel which way is down,
 take a step, and repeat. You don't need to see the whole valley — only which way is down
 right here.
@@ -151,13 +148,13 @@ and bounce across the valley instead of settling. The learning rate is a balanci
 
 Gradient descent makes the **training** loss small. But small training loss is not the goal —
 the goal is to do well on **new** data the model has never seen. A model with too many knobs
-can drive its training loss to almost nothing by memorising the quirks and noise of the
+can drive its training loss to almost nothing by memorizing the quirks and noise of the
 training set, then fail on anything new. That trap is **overfitting**.
 
 ```{admonition} Definition — overfitting
 :class: important
 **Overfitting** is when a model fits its training data so closely that it captures the random
-noise as well as the real pattern, and so performs worse on fresh data. It has memorised the
+noise as well as the real pattern, and so performs worse on fresh data. It has memorized the
 answers instead of learning the lesson.
 ```
 
@@ -208,7 +205,7 @@ fig
 
 In [](#overfit-fig) the two curves part ways. Training error slides toward zero, but
 validation error bottoms out at a modest complexity and then **climbs** as the model starts
-memorising noise. The best model is the one that does best on data it hasn't seen — not the
+memorizing noise. The best model is the one that does best on data it hasn't seen — not the
 one that fits the training set hardest. Spotting and avoiding this gap is one of the most
 important skills in all of machine learning.
 
@@ -240,7 +237,7 @@ training error?
 :class: dropdown
 You would pick the degree with the lowest **validation** error (around degree 3–5), not the
 highest degree. The high-degree model has the lowest *training* error but the worst
-validation error — it has memorised the noise. On future patients you only ever see "new"
+validation error — it has memorized the noise. On future patients you only ever see "new"
 data, so the validation score is the honest estimate of how the model will actually perform.
 Choosing complexity this way is the heart of the train/validation discipline introduced in
 [](2_b2-train-test.md).
@@ -259,5 +256,3 @@ Choosing complexity this way is the heart of the train/validation discipline int
 - Driving training loss to zero invites **overfitting**; the model that wins is the one with
   the lowest error on **held-out** data, not the tightest fit to what it has already seen.
 ```
-</content>
-</invoke>

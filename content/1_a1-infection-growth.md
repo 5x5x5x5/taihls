@@ -9,13 +9,6 @@ kernelspec:
 
 # Chapter A1 — How fast does an infection grow?
 
-<!-- Launch badges. JupyterLite (in-page) is the real zero-install path and is
-     enabled site-wide in myst.yml; these badges are extra on-ramps.
-     Note: the Colab badge works for .ipynb files; this book's chapters are .md
-     code-cell files, so Colab is best-effort — JupyterLite or Binder is preferred. -->
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls)
-
 ```{admonition} Learning objectives
 :class: note
 By the end of this chapter you will be able to:
@@ -95,7 +88,7 @@ happening" right up until it's everywhere. The early small numbers hid how fast
 the *rate* was building.
 
 ```{tip}
-Try it yourself: in the cell labelled [](#growth-sim), change `N0 = 1` to
+Try it yourself: in the cell labeled [](#growth-sim), change `N0 = 1` to
 `N0 = 10` and re-run. Every count is 10× bigger — but the *shape* of the curve is
 identical. Exponential growth doesn't care where you start.
 ```

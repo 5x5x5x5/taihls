@@ -14,7 +14,7 @@ kernelspec:
 By the end of this chapter you will be able to:
 - measure how strongly two columns move together with a **correlation** coefficient;
 - explain the difference between **association** and **causation**;
-- recognise a **confounder** — a hidden cause lurking behind a misleading pattern;
+- recognize a **confounder** — a hidden cause lurking behind a misleading pattern;
 - **stratify** a dataset to check whether an association survives once you account for
   that hidden cause.
 ```
@@ -86,7 +86,7 @@ coefficient**.
 
 ```{admonition} Definition — correlation
 :class: important
-The **correlation coefficient** is a number between $-1$ and $+1$ that summarises how
+The **correlation coefficient** is a number between $-1$ and $+1$ that summarizes how
 two columns move together. Near $+1$: when one goes up, the other goes up. Near $-1$:
 when one goes up, the other goes down. Near $0$: no straight-line relationship.
 ```
@@ -190,7 +190,7 @@ print(f"raw correlation now: {np.corrcoef(dose, outcome)[0, 1]:+.2f}")
 The raw correlation is now **negative** — the drug's true helpful effect shows up
 directly, with no stratifying needed. Because the dose no longer depends on severity,
 severity can't confound the comparison: random assignment **breaks the link** between
-the confounder and the treatment. That is exactly why **randomised** experiments are
+the confounder and the treatment. That is exactly why **randomized** experiments are
 the gold standard for separating association from causation.
 ```
 

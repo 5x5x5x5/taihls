@@ -8,8 +8,7 @@ kernelspec:
 
 # Chapter D3 — Machines that read and write
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/d3-run-an-llm.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/d3-run-an-llm.ipynb)
 
 ```{admonition} Learning objectives
 :class: note
@@ -25,7 +24,7 @@ By the end of this chapter you will be able to:
 You have used a language model already today. When your phone offers "you" right
 after you type "thank", or "doctor" after "see the", it is doing one thing: guessing
 the next word from the words so far. Scale that same trick up enormously — train it on
-much of the internet — and you get the chatbots that can draft an email, summarise a
+much of the internet — and you get the chatbots that can draft an email, summarize a
 study, or answer a patient's question.
 
 In this chapter we strip the trick down to its bones and build a tiny version we can
@@ -214,7 +213,7 @@ patient feels" strongly predicts "better") and tends to produce more coherent te
 The new problem is **data sparsity**: there are far more possible two-word histories
 than one-word ones, so most of them are never seen in a small corpus, leaving the
 model with nothing to go on. Real LLMs solve this by learning *patterns* across
-histories with a neural network instead of memorising exact counts.
+histories with a neural network instead of memorizing exact counts.
 ```
 
 ## Key takeaways
@@ -225,7 +224,7 @@ histories with a neural network instead of memorising exact counts.
   token from the ones before.
 - Its output is a **probability distribution** over all possible next tokens, and it
   writes by **sampling** from that distribution.
-- A **bigram (Markov) model** is just counting which token follows which, normalised
+- A **bigram (Markov) model** is just counting which token follows which, normalized
   to probabilities — buildable in a dozen lines.
 - Real LLMs differ in **scale and memory**, not in the core idea — which is why the
   same lens explains both their fluency and their tendency to make things up.

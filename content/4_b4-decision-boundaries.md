@@ -75,7 +75,7 @@ print(f"Test accuracy with a straight-line boundary: {clf.score(X_test, y_test):
 
 To *see* the boundary we use a classic trick: cover the plot with a fine grid of
 points (a **meshgrid**), ask the model to classify every grid point, and shade the two
-predicted regions different colors. The colour change traces out the decision boundary
+predicted regions different colors. The color change traces out the decision boundary
 for free.
 
 ```{code-cell} python

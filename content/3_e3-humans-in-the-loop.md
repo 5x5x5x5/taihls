@@ -8,9 +8,6 @@ kernelspec:
 
 # Chapter E3 — Keeping humans in the loop
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls)
-
 ```{admonition} Learning objectives
 :class: note
 By the end of this chapter you will be able to:

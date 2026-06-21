@@ -9,9 +9,6 @@ kernelspec:
 
 # Chapter D1 — DNA and proteins as text
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls)
-
 ```{admonition} Learning objectives
 :class: note
 By the end of this chapter you will be able to:
@@ -23,7 +20,7 @@ By the end of this chapter you will be able to:
 
 ## Start with a story
 
-Inside almost every one of your cells sits a molecule about two metres long, coiled
+Inside almost every one of your cells sits a molecule about two meters long, coiled
 up tighter than any headphone cable: your **DNA**. It carries the instructions to
 build and run a human being. Astonishingly, those instructions are written in an
 alphabet of just **four letters** — `A`, `C`, `G`, and `T`.
@@ -66,7 +63,7 @@ ask our first biological question of it.
 
 Not all bases are equally "sticky." A `G` always pairs with a `C`, and that pair is
 held together more strongly than an `A`–`T` pair. So a region rich in `G` and `C` is
-physically more stable. Biologists summarise this with one number.
+physically more stable. Biologists summarize this with one number.
 
 ```{admonition} Definition — GC content
 :class: important
@@ -87,7 +84,7 @@ print(f"GC content: {gc_fraction:.1%}")
 ```
 
 So exactly half of this sequence is `G` or `C`. If we screened thousands of
-sequences and one had a wildly different GC content from its neighbours, that oddball
+sequences and one had a wildly different GC content from its neighbors, that oddball
 would be worth a closer look — a first, crude way to "see" something interesting in a
 wall of letters.
 

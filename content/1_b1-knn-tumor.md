@@ -1,6 +1,6 @@
 ---
 title: 'Chapter B1 — Is this tumor benign or malignant?'
-short_title: 'B1 · Nearest neighbours'
+short_title: 'B1 · Nearest neighbors'
 kernelspec:
   name: python3
   display_name: Python 3
@@ -12,7 +12,7 @@ kernelspec:
 :class: note
 By the end of this chapter you will be able to:
 - explain how a **classifier** turns measurements into a decision;
-- describe the **k-nearest-neighbours** idea in one sentence;
+- describe the **k-nearest-neighbors** idea in one sentence;
 - build a working classifier from scratch and measure how often it is right;
 - explain why measurements must be put on a **common scale** before comparing them.
 ```
@@ -34,16 +34,16 @@ A **classifier** is a rule that takes some measurements about a thing and output
 **category** for it — here, *benign* or *malignant*.
 ```
 
-## The idea: look at your neighbours
+## The idea: look at your neighbors
 
 Here is the whole trick. To classify a new tumor, find the past tumors whose
 measurements are **most similar** to it, and let them vote. If most of the nearest
 ones were malignant, guess malignant. That's it.
 
-```{admonition} Definition — k-nearest-neighbours (k-NN)
+```{admonition} Definition — k-nearest-neighbors (k-NN)
 :class: important
-**k-nearest-neighbours** classifies a new example by finding the $k$ already-labelled
-examples closest to it (its "neighbours") and taking the **majority vote** of their
+**k-nearest-neighbors** classifies a new example by finding the $k$ already-labeled
+examples closest to it (its "neighbors") and taking the **majority vote** of their
 labels. "Closest" means the smallest straight-line distance between their
 measurements.
 ```
@@ -122,7 +122,7 @@ two of the thirty available measurements.
 
 ## Seeing the decision
 
-Let's look at the training tumors and where one test tumor's five neighbours fall.
+Let's look at the training tumors and where one test tumor's five neighbors fall.
 
 ```{code-cell} python
 :label: knn-fig
@@ -135,10 +135,10 @@ for label, name, color in [(0, "malignant", "#c0392b"), (1, "benign", "#2980b9")
 
 x_new = X_test[0]
 d = np.sqrt(((X_train - x_new) ** 2).sum(axis=1))
-neighbours = X_train[np.argsort(d)[:5]]
+neighbors = X_train[np.argsort(d)[:5]]
 ax.scatter(*x_new, s=180, marker="*", color="black", label="new tumor", zorder=5)
-ax.scatter(neighbours[:, 0], neighbours[:, 1], s=90, facecolors="none",
-           edgecolors="black", linewidths=1.5, label="its 5 neighbours")
+ax.scatter(neighbors[:, 0], neighbors[:, 1], s=90, facecolors="none",
+           edgecolors="black", linewidths=1.5, label="its 5 neighbors")
 ax.set_xlabel("mean radius (standardized)")
 ax.set_ylabel("mean texture (standardized)")
 ax.legend(loc="upper right", fontsize=8)
@@ -146,7 +146,7 @@ fig
 ```
 
 In [](#knn-fig) the two classes form two loose clouds. The new tumor (★) is judged
-by the company it keeps: its five circled neighbours vote, and the majority wins.
+by the company it keeps: its five circled neighbors vote, and the majority wins.
 
 ## Exercise
 
@@ -166,7 +166,7 @@ for k in (1, 51, 301):
     print(f"k = {k:>3}: {(preds == y_test).mean():.1%}")
 ```
 
-You should see roughly `82%`, `92%`, `63%`. With `k = 1` a single noisy neighbour can
+You should see roughly `82%`, `92%`, `63%`. With `k = 1` a single noisy neighbor can
 flip the answer — it *overfits* to quirks. A moderate `k` does best. But push `k` too
 far and almost every training tumor gets a vote: the answer becomes "whatever class is
 most common overall," so accuracy collapses to the **63% benign** baseline — the score

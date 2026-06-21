@@ -8,8 +8,7 @@ kernelspec:
 
 # Chapter E4 — Capstone: your turn
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/e4-capstone-starter.ipynb)
 
 ```{admonition} Learning objectives
 :class: note
@@ -39,7 +38,7 @@ the same five stages. Keep them in mind as a map.
 ```{admonition} Definition — the project arc
 :class: important
 1. **Question** — a specific, answerable question ("Can these measurements predict X?").
-2. **Explore** — look at the data before modelling: sizes, balance, surprises.
+2. **Explore** — look at the data before modeling: sizes, balance, surprises.
 3. **Model** — train a simple model first (you can always add complexity later).
 4. **Evaluate** — measure accuracy, a baseline, *and* fairness across groups.
 5. **Limitations** — write honestly about what your model cannot or should not do.
@@ -123,7 +122,7 @@ all using only the light toolkit:
 A ready-made scaffold with TODO cells for each milestone lives in the companion
 notebook. Open it, fill in the TODOs, and you have your capstone.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/e4-capstone-starter.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/e4-capstone-starter.ipynb)
 
 `notebooks/e4-capstone-starter.ipynb` — runs in Colab or any Jupyter; light tools only.
 

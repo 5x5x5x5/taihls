@@ -8,9 +8,6 @@ kernelspec:
 
 # Chapter E2 — Privacy, consent, and your data
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls)
-
 ```{admonition} Learning objectives
 :class: note
 By the end of this chapter you will be able to:
@@ -28,10 +25,12 @@ model. To protect privacy, someone deletes the `name` column and declares the da
 
 Not even close. Suppose the table still lists each patient's **age, ZIP code, and
 sex**. None of those is your name — but together they can be startlingly unique. A
-classic finding is that a large share of people in the United States can be pinned
-down by just those three fields. If an attacker has a *second* list (a voter roll, a
-social-media profile) with the same three fields plus real names, they can line the
-two up and put names back onto the "anonymous" medical rows. Let's name the pieces.
+classic study by Latanya Sweeney showed that **date of birth, ZIP code, and sex**
+uniquely identify roughly **87% of Americans** — and even coarser fields like the ones
+in our table can single people out in a small enough group. If an attacker has a
+*second* list (a voter roll, a social-media profile) with the same fields plus real
+names, they can line the two up and put names back onto the "anonymous" medical rows.
+Let's name the pieces.
 
 ```{admonition} Definition — PII and quasi-identifiers
 :class: important
@@ -223,7 +222,7 @@ If every member of a group shares the same sensitive value, the attacker learns 
 value anyway — this is called a **homogeneity attack**. A stronger guarantee,
 **l-diversity**, additionally requires each group to contain several *different*
 sensitive values, so locating the group reveals little. Privacy is layered: k-anonymity
-is a first line of defence, not the last.
+is a first line of defense, not the last.
 ```
 
 ## Key takeaways

@@ -8,9 +8,6 @@ kernelspec:
 
 # Chapter E1 — When AI gets it wrong for some people
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls)
-
 ```{admonition} Learning objectives
 :class: note
 By the end of this chapter you will be able to:
@@ -167,7 +164,7 @@ ax.legend(loc="lower right", fontsize=8)
 fig
 ```
 
-In [](#e1-fig) the grey "Overall" bar looks reassuring, the blue group-A bar looks
+In [](#e1-fig) the gray "Overall" bar looks reassuring, the blue group-A bar looks
 great, and the red group-B bar tells the real story. The average was never wrong —
 it was just the wrong question.
 

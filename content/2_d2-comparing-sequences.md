@@ -8,9 +8,6 @@ kernelspec:
 
 # Chapter D2 — Comparing sequences
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls)
-
 ```{admonition} Learning objectives
 :class: note
 By the end of this chapter you will be able to:
@@ -105,7 +102,7 @@ holds the edit distance between the first $i$ letters of one word and the first 
 letters of the other.
 
 The rule for each cell is short. If the two current letters match, copy the diagonal
-neighbour (no edit needed). Otherwise, take the cheapest of the three edits:
+neighbor (no edit needed). Otherwise, take the cheapest of the three edits:
 
 $$ D[i][j] = 1 + \min\big(D[i-1][j],\; D[i][j-1],\; D[i-1][j-1]\big) $$ (eq-edit)
 

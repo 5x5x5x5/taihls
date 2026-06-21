@@ -9,8 +9,7 @@ kernelspec:
 
 # Chapter C3 — Reading medical images
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/c3-medical-images-cnn.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/c3-medical-images-cnn.ipynb)
 
 ```{admonition} Learning objectives
 :class: note
@@ -28,7 +27,7 @@ of a mole for signs of melanoma. These are some of medicine's most visual tasks 
 of the first where AI matched specialist performance [@esteva2017skin]. But a computer has
 no eyes. So how can it "look" at a medical image at all?
 
-The key realisation is almost anticlimactic: to a computer, an image is **not a picture —
+The key realization is almost anticlimactic: to a computer, an image is **not a picture —
 it is a table of numbers**. Once we see that, every tool from the earlier chapters
 suddenly applies to images too.
 
@@ -58,7 +57,7 @@ print(f"{len(digits.images)} images, each {digits.images[0].shape[0]}×"
 # The very first image, printed as the grid of numbers it really is:
 print("\nImage #0 as a table of brightness values:")
 print(digits.images[0].astype(int))
-print(f"\nThis image is labelled: {digits.target[0]}")
+print(f"\nThis image is labeled: {digits.target[0]}")
 ```
 
 That block of numbers *is* the image. High values trace the bright strokes of the digit;
@@ -76,7 +75,7 @@ for ax, image, label in zip(axes, digits.images, digits.target):
 fig
 ```
 
-Each picture in [](#show-images) is the same kind of table we printed above, just coloured
+Each picture in [](#show-images) is the same kind of table we printed above, just colored
 by brightness. A model never sees the picture — it sees the 64 numbers.
 
 ## Training a classifier on images
@@ -171,7 +170,7 @@ ways that are easy to miss and dangerous in the clinic:
 
 ```{admonition} Why test accuracy can mislead
 :class: warning
-A single accuracy number summarises performance on data that *resembles the training set*.
+A single accuracy number summarizes performance on data that *resembles the training set*.
 The real question for a medical tool is how it behaves on patients, scanners, and clinics it
 has **never seen** — and that almost always requires testing far beyond the original data.
 ```
@@ -180,7 +179,7 @@ has **never seen** — and that almost always requires testing far beyond the or
 
 ```{admonition} Exercise C3.1 — Does a simpler model agree?
 :class: hint
-Swap the logistic-regression classifier for the k-nearest-neighbours idea from
+Swap the logistic-regression classifier for the k-nearest-neighbors idea from
 [](1_b1-knn-tumor.md): use `from sklearn.neighbors import KNeighborsClassifier` with
 `KNeighborsClassifier(n_neighbors=5)`. Train and score it on the same split. Is it better or
 worse than logistic regression here?
@@ -233,5 +232,3 @@ failures happen on real scans.
   uneven performance across patient groups — so medical-image AI must be tested far beyond
   its training set and kept under human oversight.
 ```
-</content>
-</invoke>

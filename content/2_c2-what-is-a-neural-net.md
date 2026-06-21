@@ -9,8 +9,7 @@ kernelspec:
 
 # Chapter C2 — What is a neural network?
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/c2-first-neural-net.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/c2-first-neural-net.ipynb)
 
 ```{admonition} Learning objectives
 :class: note
@@ -143,7 +142,7 @@ lands in exactly the right place.
 
 ## Seeing the curved boundary
 
-Let's colour the whole plane by what the network predicts, and overlay the two crescents.
+Let's color the whole plane by what the network predicts, and overlay the two crescents.
 A straight-line model would split this picture with one diagonal; watch what the network
 does instead.
 
@@ -219,5 +218,3 @@ lets it fit noise it should ignore. Bigger is not automatically better.
 - We ran only a **forward pass** with fixed weights — *learning* those weights is the
   subject of [](4_c4-how-models-learn.md) and the companion PyTorch notebook.
 ```
-</content>
-</invoke>

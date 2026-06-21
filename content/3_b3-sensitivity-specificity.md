@@ -207,7 +207,7 @@ higher **specificity** if you had to sacrifice one? Justify your answer in terms
 
 ```{admonition} Solution
 :class: dropdown
-For a serious cancer most people would favour **high sensitivity**: a false negative
+For a serious cancer most people would favor **high sensitivity**: a false negative
 means a missed, untreated tumor, while a false positive "only" leads to a follow-up
 test and some anxiety. The standard design is a *sensitive* screen (catch nearly
 everyone) followed by a *specific* confirmatory test (weed out the false alarms). The

@@ -8,8 +8,7 @@ kernelspec:
 
 # Chapter D5 — Foundation models for biology
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/d5-protein-foundation-models.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/5x5x5x5/taihls/blob/course-curriculum/notebooks/d5-protein-foundation-models.ipynb)
 
 ```{admonition} Learning objectives
 :class: note
@@ -68,7 +67,7 @@ harmful and even help predict structure — never having been explicitly taught 
 **scGPT** [@cui2024scgpt] applies the same recipe to single-cell data: trained on
 tens of millions of individual cells, it learns a general representation of cell
 biology that can be adapted to identify cell types, predict responses to drugs, and
-more — one model standing in for many specialised pipelines.
+more — one model standing in for many specialized pipelines.
 ```
 
 The common thread: **pretrain once on a flood of data, then adapt to many tasks.** And
@@ -120,7 +119,7 @@ print(np.round(vectors["P1"], 2))
 
 Each protein is now a point in a 20-dimensional space — a vector. To compare two of
 them, we measure how close their vectors are; here we use the same straight-line
-distance idea from k-nearest-neighbours in [](1_b1-knn-tumor.md), turned into a
+distance idea from k-nearest-neighbors in [](1_b1-knn-tumor.md), turned into a
 similarity (close = similar = high).
 
 ```{code-cell} python
@@ -218,7 +217,7 @@ All three are **pretrained once on enormous amounts of biological data** and the
 **adapted to many different downstream tasks**, instead of being hand-built for one job.
 That reuse — one general model serving as the "foundation" for protein structure,
 mutation effects, cell typing, and more — is the defining property. It mirrors how a
-single large language model can write, summarise, and translate, all from the same
+single large language model can write, summarize, and translate, all from the same
 pretrained base.
 ```
 
