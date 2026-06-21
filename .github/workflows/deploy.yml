@@ -1,0 +1,49 @@
+# Build the MyST/Jupyter Book site and publish to GitHub Pages.
+# Uses uv (not npm) so CI runs the exact pinned jupyter-book from uv.lock.
+# Setup: repo Settings → Pages → Source = "GitHub Actions".
+name: Deploy book to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time; don't cancel an in-progress production deploy.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # Serves assets under https://OWNER.github.io/REPO/. Set to '' for a custom domain.
+  BASE_URL: /${{ github.event.repository.name }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - name: Build HTML (executing code cells)
+        run: uv run jupyter book build --html --execute --strict
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_build/html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

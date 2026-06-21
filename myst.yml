@@ -1,0 +1,35 @@
+# Jupyter Book 2 / MyST configuration.
+# Structure (the TOC) lives in toc.yml — edit that, not this file. See `extends:`.
+version: 1
+extends:
+  - toc.yml
+project:
+  title: 'TAIHLS — Topics in Artificial Intelligence for Health and Life Sciences'
+  description: An interactive online textbook on AI for health and life sciences, for advanced high-school students and first-year undergraduates.
+  keywords:
+    - artificial intelligence
+    - machine learning
+    - health
+    - life sciences
+    - bioinformatics
+    - undergraduate
+    - open education
+  # PLACEHOLDER — replace with the real author(s).
+  authors:
+    - name: PLACEHOLDER Author
+      email: placeholder@example.com
+  # PLACEHOLDER — replace OWNER/REPO with your GitHub repository.
+  github: https://github.com/PLACEHOLDER/taihls
+  license:
+    content: CC-BY-4.0
+    code: MIT
+  bibliography:
+    - references.bib
+  # In-browser execution via JupyterLite/Pyodide — readers run code with no install.
+  jupyter:
+    lite: true
+  # Binder "launch" button (a full URL). PLACEHOLDER — set OWNER/REPO.
+  # The Colab/Binder badges in chapters are the other on-ramps.
+  binder: https://mybinder.org/v2/gh/PLACEHOLDER/taihls/HEAD
+site:
+  template: book-theme

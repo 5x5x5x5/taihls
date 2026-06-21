@@ -1,0 +1,11 @@
+[project]
+name = "taihls"
+version = "0.1.0"
+description = "TAIHLS — an interactive online textbook on AI for health and life sciences"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "jupyter-book>=2",
+    "matplotlib>=3.11.0",
+]

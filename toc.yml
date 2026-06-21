@@ -1,0 +1,25 @@
+# Table of contents — edit freely; structure only, no other config here.
+# Parts are a `title:` + `children:`. Chapters are `file:` entries.
+# Filenames carry a numeric prefix for ordering; the URL slug drops it.
+# <!-- PLACEHOLDER --> Rename Parts and chapters to your real curriculum.
+version: 1
+project:
+  toc:
+    - file: index.md
+    - file: preface.md
+    - file: advice.md
+    - title: 'Part A — PLACEHOLDER'
+      children:
+        - file: content/1_a1-placeholder.md   # ← fully-worked exemplar chapter
+        - file: content/2_a2-placeholder.md
+        - file: content/3_a3-placeholder.md
+    - title: 'Part B — PLACEHOLDER'
+      children:
+        - file: content/1_b1-placeholder.md
+        - file: content/2_b2-placeholder.md
+    - title: 'Back matter'
+      children:
+        - file: back/reproducibility.md
+        - file: back/references.md
+        - file: back/acknowledgements.md
+        - file: back/license.md

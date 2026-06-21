@@ -1,0 +1,23 @@
+# Build output
+_build/
+*.log
+
+# Python / uv
+.venv/
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Jupyter / execution caches
+.ipynb_checkpoints/
+.jupyter_cache/
+
+# MyST downloaded templates / generated static
+node_modules/
+_static/
+
+# OS
+.DS_Store
