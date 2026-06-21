@@ -1,22 +1,44 @@
-# Table of contents — edit freely; structure only, no other config here.
-# Parts are a `title:` + `children:`. Chapters are `file:` entries.
-# Filenames carry a numeric prefix for ordering; the URL slug drops it.
-# <!-- PLACEHOLDER --> Rename Parts and chapters to your real curriculum.
+# Table of contents. Structure only — referenced from myst.yml via `extends:`.
+# Parts are a `title:` + `children:`; chapters are `file:` entries.
+# Companion Colab notebooks (notebooks/*.ipynb) are intentionally NOT listed here:
+# they are heavyweight/GPU and run on Colab, not in the book build.
 version: 1
 project:
   toc:
     - file: index.md
     - file: preface.md
     - file: advice.md
-    - title: 'Part A — PLACEHOLDER'
+    - title: 'Part A — Seeing patterns in biological data'
       children:
-        - file: content/1_a1-placeholder.md   # ← fully-worked exemplar chapter
-        - file: content/2_a2-placeholder.md
-        - file: content/3_a3-placeholder.md
-    - title: 'Part B — PLACEHOLDER'
+        - file: content/1_a1-infection-growth.md
+        - file: content/2_a2-looking-at-data.md
+        - file: content/3_a3-association-causation.md
+        - file: content/4_a4-reading-statistics.md
+    - title: 'Part B — Teaching a computer to decide'
       children:
-        - file: content/1_b1-placeholder.md
-        - file: content/2_b2-placeholder.md
+        - file: content/1_b1-knn-tumor.md
+        - file: content/2_b2-train-test.md
+        - file: content/3_b3-sensitivity-specificity.md
+        - file: content/4_b4-decision-boundaries.md
+    - title: 'Part C — Learning from examples at scale'
+      children:
+        - file: content/1_c1-fitting-a-line.md
+        - file: content/2_c2-what-is-a-neural-net.md
+        - file: content/3_c3-medical-images.md
+        - file: content/4_c4-how-models-learn.md
+    - title: 'Part D — Life as sequences, language as data'
+      children:
+        - file: content/1_d1-dna-as-text.md
+        - file: content/2_d2-comparing-sequences.md
+        - file: content/3_d3-language-models.md
+        - file: content/4_d4-hallucination.md
+        - file: content/5_d5-foundation-models-bio.md
+    - title: 'Part E — Using AI responsibly in health'
+      children:
+        - file: content/1_e1-bias-in-medical-ai.md
+        - file: content/2_e2-privacy-consent.md
+        - file: content/3_e3-humans-in-the-loop.md
+        - file: content/4_e4-capstone.md
     - title: 'Back matter'
       children:
         - file: back/reproducibility.md

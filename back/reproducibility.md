@@ -4,35 +4,40 @@ title: Reproducibility & running the code
 
 # Reproducibility & running the code
 
-Everything in this book is meant to *run*. There are three ways to run it, from
-zero-effort to full control.
+Everything in this book is meant to *run*. There are two tiers of code, and you need
+nothing installed for either.
 
-## 1. In your browser, no install (recommended for students)
+## Tier 1 — Light examples (in the page / your browser)
 
-This book ships with **JupyterLite** (`project.jupyter.lite: true`), so every code
-cell can run directly in the page — Python executes in your browser via
-WebAssembly. Look for the launch / run button on any chapter with code.
+Most chapters carry small, self-contained code cells using only the standard
+scientific-Python stack (`numpy`, `pandas`, `matplotlib`, `scikit-learn`). They use
+small, built-in datasets — no downloads — so they run during the book build and,
+best-effort, right in your browser via **JupyterLite** (look for the run button).
 
 ```{note}
-JupyterLite runs a slimmed-down Python (Pyodide). Most teaching libraries
-(`matplotlib`, `numpy`, `pandas`) work; very large or compiled-only packages may
-not. The examples in this book are chosen to run there.
+JupyterLite runs Python in your browser via WebAssembly (Pyodide). It covers the
+light examples; the heavy ones below need a real GPU, which is what Colab is for.
 ```
 
-## 2. Binder — a full cloud environment
+## Tier 2 — Heavy examples (Google Colab, free GPU)
 
-The **Binder** launch button (configured in `myst.yml` under `project.binder`)
-spins up a complete environment from `requirements.txt`. Slower to start, but it's
-real CPython with no browser limits.
+Training a real neural network, running a language model, or computing protein
+embeddings needs a GPU. Those live in **companion notebooks** under `notebooks/`,
+linked from the relevant chapters by an **Open in Colab** badge. Click the badge,
+then *Runtime → Change runtime type → GPU*. Each notebook installs its own
+dependencies in the first cell — nothing to set up in advance.
 
-## 3. Locally with `uv`
+## Running locally with `uv`
 
 ```bash
 git clone git@github.com:5x5x5x5/taihls.git
 cd taihls
 uv sync                              # exact versions from uv.lock
-uv run jupyter book start --execute  # serve + run the code
+uv run jupyter book start --execute  # serve + run the light code
 ```
 
+The heavy companion notebooks are best run on Colab (for the free GPU), but you can
+also open them locally with `uv run jupyter lab` if you have a CUDA GPU.
+
 <!-- PLACEHOLDER -->
-Add any dataset download steps, version notes, or hardware/runtime caveats here.
+Add any dataset notes or version caveats here as the book grows.

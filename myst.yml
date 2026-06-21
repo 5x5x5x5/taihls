@@ -31,3 +31,5 @@ project:
   binder: https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD
 site:
   template: book-theme
+  options:
+    favicon: favicon.png

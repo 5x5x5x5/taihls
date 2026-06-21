@@ -1,6 +1,10 @@
-# For cloud runners (Binder / Colab) that can't read pyproject.toml.
+# For cloud runners (Binder) that can't read pyproject.toml.
 # The pinned source of truth is pyproject.toml + uv.lock; keep these in sync.
-# Only the packages the code-cells need to execute — all Pyodide-compatible.
+# Light tier only — what the in-book code cells need. Heavyweight libs (torch,
+# transformers, ...) are installed inside the companion Colab notebooks themselves.
 jupyter-book>=2
 matplotlib
+numpy
+pandas
+scikit-learn
 ipykernel

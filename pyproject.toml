@@ -8,4 +8,6 @@ dependencies = [
     "ipykernel>=7.3.0",
     "jupyter-book>=2",
     "matplotlib>=3.11.0",
+    "pandas>=3.0.3",
+    "scikit-learn>=1.9.0",
 ]
