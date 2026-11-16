@@ -30,4 +30,5 @@ project:
   # Binder "launch" button. The Colab/Binder badges in chapters are other on-ramps.
   binder: https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD
 site:
-  template: book-theme
+  # Pinned: jupyter-book 2.1.5 (uv.lock) cannot run newer themes and hangs.
+  template: https://github.com/jupyter-book/myst-theme/releases/download/myst-to-react%401.4.1/book-theme.zip
