@@ -1,0 +1,35 @@
+# .github/workflows/deploy-cloudflare.yml in the taihls repo.
+# Same build as deploy.yml (uv + pinned jupyter-book), but served from the root of taihls.com.
+name: Deploy book to Cloudflare
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare
+  cancel-in-progress: false
+
+env:
+  BASE_URL: "" # served from the root of taihls.com, not /taihls
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - name: Build HTML (executing code cells)
+        run: uv run jupyter book build --html --execute --strict
+      - uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4"

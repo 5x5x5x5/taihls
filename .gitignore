@@ -21,3 +21,4 @@ _static/
 
 # OS
 .DS_Store
+.wrangler/

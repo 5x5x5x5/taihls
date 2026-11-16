@@ -1,0 +1,10 @@
+// Goes in the root of the taihls repo. `directory` must match the MyST build output.
+{
+  "name": "taihls",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "./_build/html" },
+  "routes": [
+    { "pattern": "taihls.com", "custom_domain": true },
+    { "pattern": "www.taihls.com", "custom_domain": true }
+  ]
+}
