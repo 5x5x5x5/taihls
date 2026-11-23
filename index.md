@@ -5,81 +5,80 @@ short_title: 'Home'
 
 # Artificial Intelligence for Health & Life Sciences
 
-*An interactive, open-source textbook where every idea starts with a real biomedical puzzle — and every line of code runs right in your browser.*
+*A full-semester interactive online textbook for advanced high-school students and introductory undergraduates — where every idea starts with a real health or biology puzzle, a simple hand-worked example, and short Python code you can run right in your browser.*
 
-Artificial intelligence is reshaping medicine and biology: predicting the 3D structures of proteins and drug complexes, reading radiology scans alongside clinicians, decoding the non-coding genome, and assisting doctors during diagnostic conversations. Yet most introductions either bury beginners under graduate calculus or hand out buzzwords without ever opening the hood.
+Artificial intelligence is transforming medicine and biology: helping doctors spot cancers on mammograms, folding proteins and designing new medicines, reading genomes, and drafting patient summaries. Yet most introductions either bury beginners under college calculus and linear algebra or hand out buzzwords without ever showing how anything works.
 
-**TAIHLS** takes a different path. With only **high-school algebra**, curiosity, and a willingness to tinker with short Python labs, you will build small working versions of the real algorithms behind modern health and life-science AI — and develop the scientific skepticism needed to tell genuine breakthroughs from dangerous hype.
+**TAIHLS** is built specifically for a **16-week semester**. Every chapter focuses on **one clear big idea**, explains every term in plain English the first time it appears, and builds up from high-school algebra and short, readable Python code — no calculus, no linear algebra, and no prior biology or AI coursework required.
 
-## Explore the five parts
+## Course roadmap (6 Units · 28 Bite-Sized Lessons)
 
 ::::{grid} 1 1 2 2
 
-:::{card} Part 1 · Data, Uncertainty & Causality
-:link: content/1_1-models-and-outbreaks.md
-:header: **Foundations of Scientific Reasoning**
+:::{card} Unit 0 · Getting Started (Week 1)
+:link: content/0_1-python-and-data-warmup.md
+:header: **Python & Data Warm-Up**
 
-Simulate outbreaks (exponential, logistic, SIR), inspect messy clinical tables, untangle **Simpson's paradox** with causal diagrams, and master base rates and bootstrap confidence intervals.
+Refresh variables, lists, loops, functions, and simple charts using a morning heart-rate log — so coding never gets in the way of the science.
 :::
 
-:::{card} Part 2 · Classical ML in the Clinic
-:link: content/2_1-nearest-neighbors-and-features.md
-:header: **Decisions, Metrics & Honest Validation**
+:::{card} Unit 1 · Models, Data & Scientific Thinking (Weeks 1–3)
+:link: content/1_1-exponential-and-logistic-growth.md
+:header: **5 Lessons · Outbreaks, Data & Evidence**
 
-Build a breast-tumor classifier from scratch, catch subtle **data leakage**, trade sensitivity against specificity with ROC/PR curves and calibration plots, and compare trees, forests, and linear rules.
+Compare exponential and limited growth, simulate a school outbreak (SIR), explore real diabetes data, untangle correlation from causation, and master base rates.
 :::
 
-:::{card} Part 3 · Deep Learning & Medical Imaging
-:link: content/3_1-loss-and-gradient-descent.md
-:header: **Opening the Black Box (No Calculus)**
+:::{card} Unit 2 · Teaching a Computer to Decide (Weeks 4–6)
+:link: content/2_1-nearest-neighbors.md
+:header: **5 Lessons · Classical Machine Learning**
 
-Roll downhill on loss landscapes, train a neural network on a curved drug-synergy zone, write a 2D image convolution filter by hand, and expose **shortcut learning** in a simulated hospital scan experiment.
+Build a breast-tumor classifier from scratch, watch overfitting happen, catch sneaky **data leakage**, weigh false alarms against missed cases, and compare lines, trees, and forests.
 :::
 
-:::{card} Part 4 · Sequences, Language & Foundation Models
-:link: content/4_1-dna-proteins-and-alignment.md
-:header: **From DNA Letters to AlphaFold 3 & Evo 2**
+:::{card} Unit 3 · How Neural Networks Learn and See (Weeks 7–9)
+:link: content/3_1-fitting-a-line-and-loss.md
+:header: **5 Lessons · Deep Learning (No Calculus!)**
 
-Align real hemoglobin sequences, visualize Transformer **self-attention**, build a mini **RAG** pipeline to curb hallucinations, and tour **AlphaFold 3, ESM3, Evo 2, AlphaGenome, and Virtual Cells**.
+Measure mistakes with loss, roll downhill with calculus-free gradient descent, train a tiny neural network, write a sliding image filter by hand, and catch a cheating hospital X-ray AI.
+:::
+
+:::{card} Unit 4 · DNA, Language & Biological AI (Weeks 10–12)
+:link: content/4_1-dna-and-proteins-as-text.md
+:header: **6 Lessons · From Hemoglobin to AlphaFold 3**
+
+Decode real human hemoglobin DNA, align mutated sequences, see how chatbots predict words, unpack embeddings & attention, build an open-book RAG helper, and tour AlphaFold 3, ESM3, Evo 2, and AlphaGenome.
+:::
+
+:::{card} Unit 5 · Fairness, Privacy, Safety & Capstone (Weeks 13–16)
+:link: content/5_1-fairness-and-bias.md
+:header: **6 Lessons · Responsible Health AI**
+
+Audit hidden healthcare bias, test re-identification and k-anonymity, try differential privacy and federated learning, keep humans in the loop, and finish with your own 2-week biomedical capstone.
 :::
 
 ::::
 
-::::{grid} 1 1 1 1
+## Who this course is for
 
-:::{card} Part 5 · Responsible, Safe & Equitable Health AI
-:link: content/5_1-algorithmic-fairness.md
-:header: **Fairness, Privacy, Governance & Your Capstone**
-
-Audit proxy-label and representation bias, code **differential privacy** and **federated learning** across three hospitals, study **FDA PCCPs, the EU AI Act, and TRIPOD+AI**, and complete a biomedical capstone project.
-:::
-
-::::
-
-## Who this book is for
-
-- **Advanced high-school students** exploring careers in medicine, biology, data science, or AI.
-- **First-year undergraduates** in biology, pre-med, public health, biomedical engineering, or computer science looking for an applied, intuition-first gateway.
-- **Curious self-learners and instructors** seeking a classroom-ready, zero-install interactive curriculum.
-
-**Prerequisites:** Comfort with high-school algebra (variables, slopes, reading graphs) and willingness to run and edit short Python snippets. **No calculus, linear algebra, statistics, or prior biology coursework is assumed** — every technical term is defined on first use and collected in the [Glossary](back/glossary.md).
+- **Advanced high-school students (grades 11–12)** taking a one-semester AI, data science, or computational biology elective.
+- **First-year undergraduates** looking for a welcoming, hands-on introduction before upper-level courses.
+- **What you need:** High-school algebra (slopes, percentages, reading x–y graphs) and curiosity. **Unit 0** covers every Python skill you need to begin.
 
 ## How to run the code
 
-This book uses a **two-tier execution design** so nothing gets between you and the ideas:
-
 ::::{tab-set}
 
-:::{tab-item} Tier 1 · In-Page (Zero Install)
-Every chapter's code labs use lightweight, Pyodide-compatible Python (`numpy`, `pandas`, `matplotlib`, `scikit-learn`, `scipy`) with built-in or self-contained biomedical datasets. They execute cleanly during the build and run right in your browser via **JupyterLite** — no account, no setup, no downloads.
+:::{tab-item} Tier 1 · In Your Browser (No Install)
+Every chapter's code cells use simple, lightweight Python (`numpy`, `pandas`, `matplotlib`, `scikit-learn`) with built-in or self-contained datasets. They run right in the page via **JupyterLite** — zero setup.
 :::
 
-:::{tab-item} Tier 2 · Google Colab (Free GPU)
-Six chapters pair with **companion Colab notebooks** (`notebooks/*.ipynb`) for heavyweight GPU work: training PyTorch neural networks, classifying real pediatric chest X-rays from **MedMNIST**, inspecting live next-token probabilities in an open LLM, computing real **ESM-2** protein embeddings, auditing clinical fairness, and launching your capstone. Look for the *Open in Colab* badge at the top of those chapters.
+:::{tab-item} Tier 2 · Google Colab (6 Optional GPU Labs)
+Six lessons pair with **companion Google Colab notebooks** (`notebooks/*.ipynb`) for bigger experiments: PyTorch neural nets, real pediatric chest X-rays, a live language model, real ESM-2 protein embeddings, a clinical audit lab, and the capstone starter. Look for the *Open in Colab* button at the top of those chapters.
 :::
 
 :::{tab-item} Local (`uv`)
-Want full offline control? Clone the repo and launch the entire textbook locally in two commands:
+Instructors or students running locally can launch the full site in two commands:
 
 ```bash
 uv sync
@@ -92,5 +91,5 @@ See [Reproducibility & Running the Code](back/reproducibility.md) for details.
 ::::
 
 ```{tip}
-**First time here?** Read the [Preface](preface.md) for why we wrote this book, [How to Learn from This Book](advice.md) to master our **PRIMM** coding habit, and the [Course Map & Pacing Guide](pacing.md) to pick a reading schedule.
+**Start here:** Read the [Preface](preface.md), skim [How to Learn from This Book](advice.md), check the [16-Week Semester Pacing Guide](pacing.md), and jump straight into [Chapter 0.1 — Python Warm-Up](content/0_1-python-and-data-warmup.md)!
 ```

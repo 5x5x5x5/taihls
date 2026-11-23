@@ -1,6 +1,6 @@
-# Table of contents — structure only, extended by myst.yml.
-# Companion GPU/heavy Colab notebooks live under notebooks/*.ipynb and are linked
-# directly from their respective chapters rather than built into the static site.
+# Table of contents — full-semester (16-week) advanced high-school course.
+# Structure only; imported by myst.yml via `extends:`.
+# Companion GPU/heavy Colab notebooks live under notebooks/*.ipynb.
 version: 1
 project:
   toc:
@@ -8,36 +8,46 @@ project:
     - file: preface.md
     - file: advice.md
     - file: pacing.md
-    - title: 'Part 1 — Data, Uncertainty, and Causality'
+    - title: 'Unit 0 — Getting Started'
       children:
-        - file: content/1_1-models-and-outbreaks.md
-        - file: content/1_2-exploring-clinical-data.md
-        - file: content/1_3-correlation-confounding-causation.md
-        - file: content/1_4-probability-and-base-rates.md
-    - title: 'Part 2 — Classical Machine Learning in the Clinic'
+        - file: content/0_1-python-and-data-warmup.md
+    - title: 'Unit 1 — Models, Data, and Scientific Thinking'
       children:
-        - file: content/2_1-nearest-neighbors-and-features.md
-        - file: content/2_2-generalization-and-leakage.md
-        - file: content/2_3-clinical-metrics-and-thresholds.md
-        - file: content/2_4-trees-ensembles-and-boundaries.md
-    - title: 'Part 3 — Deep Learning and Medical Imaging'
+        - file: content/1_1-exponential-and-logistic-growth.md
+        - file: content/1_2-simulating-an-outbreak.md
+        - file: content/1_3-looking-at-clinical-data.md
+        - file: content/1_4-correlation-and-confounding.md
+        - file: content/1_5-base-rates-and-uncertainty.md
+    - title: 'Unit 2 — Teaching a Computer to Decide'
       children:
-        - file: content/3_1-loss-and-gradient-descent.md
-        - file: content/3_2-neural-networks-from-scratch.md
-        - file: content/3_3-medical-imaging-and-cnns.md
-        - file: content/3_4-shortcuts-and-failure-modes.md
-    - title: 'Part 4 — Sequences, Language, and Foundation Models'
+        - file: content/2_1-nearest-neighbors.md
+        - file: content/2_2-train-test-and-overfitting.md
+        - file: content/2_3-data-leakage.md
+        - file: content/2_4-mistakes-and-thresholds.md
+        - file: content/2_5-lines-trees-and-forests.md
+    - title: 'Unit 3 — How Neural Networks Learn and See'
       children:
-        - file: content/4_1-dna-proteins-and-alignment.md
-        - file: content/4_2-language-models-and-attention.md
-        - file: content/4_3-hallucination-grounding-rag.md
-        - file: content/4_4-foundation-models-biology.md
-    - title: 'Part 5 — Responsible, Safe, and Equitable Health AI'
+        - file: content/3_1-fitting-a-line-and-loss.md
+        - file: content/3_2-gradient-descent.md
+        - file: content/3_3-inside-a-neural-network.md
+        - file: content/3_4-how-computers-see-scans.md
+        - file: content/3_5-shortcuts-and-clever-hans.md
+    - title: 'Unit 4 — DNA, Language Models, and Biological AI'
       children:
-        - file: content/5_1-algorithmic-fairness.md
-        - file: content/5_2-privacy-enhancing-tech.md
-        - file: content/5_3-humans-regulation-deployment.md
-        - file: content/5_4-capstone-project.md
+        - file: content/4_1-dna-and-proteins-as-text.md
+        - file: content/4_2-comparing-sequences.md
+        - file: content/4_3-predicting-the-next-word.md
+        - file: content/4_4-embeddings-and-attention.md
+        - file: content/4_5-hallucination-and-grounding.md
+        - file: content/4_6-foundation-models-of-life.md
+    - title: 'Unit 5 — Fairness, Privacy, Safety, and Capstone'
+      children:
+        - file: content/5_1-fairness-and-bias.md
+        - file: content/5_2-anonymity-and-privacy.md
+        - file: content/5_3-modern-privacy-tech.md
+        - file: content/5_4-humans-in-the-loop.md
+        - file: content/5_5-from-lab-to-hospital.md
+        - file: content/5_6-capstone-project.md
     - title: 'Back matter'
       children:
         - file: back/glossary.md
