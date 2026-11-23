@@ -1,0 +1,32 @@
+/* TAIHLS custom textbook presentation refinements */
+:root {
+  --taihls-blue: #0072B2;
+  --taihls-teal: #009E73;
+  --taihls-vermilion: #D55E00;
+  --taihls-amber: #E69F00;
+}
+
+/* Improve table legibility */
+article table {
+  font-size: 0.94rem;
+  border-collapse: collapse;
+}
+
+/* Subtle polish on cards */
+.myst-card {
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.myst-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Make chapter figures crisp and centered */
+figure img {
+  border-radius: 6px;
+}
+
+/* Slightly airier admonition content */
+aside.admonition p:last-child {
+  margin-bottom: 0;
+}

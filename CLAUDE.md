@@ -1,4 +1,4 @@
-# TAIHLS — project notes for Claude
+# TAIHLS — project notes
 
 Interactive textbook built with **Jupyter Book 2 (MyST engine)** — *not* v1.
 
@@ -9,21 +9,18 @@ Interactive textbook built with **Jupyter Book 2 (MyST engine)** — *not* v1.
 - Content files are `.md` with MyST directives.
 
 ## Workflow
-- `uv` only. `uv sync`; `uv run jupyter book start [--execute]`; `uv run jupyter book build --html --execute`.
-- HTML output → `_build/html/` (a client-rendered SPA: per-page `index.html` + `.json`).
+- `uv` only:
+  - `uv sync`
+  - `uv run jupyter book start --execute`
+  - `uv run jupyter book build --html --execute --strict`
+- Static HTML output → `_build/html/` (client-rendered MyST SPA).
+- CI enforces `--strict` and `uv sync --frozen` — keep `pyproject.toml`, `uv.lock`, and `requirements.txt` in sync.
 
-## Gotchas
-- **Execution hangs under a sandbox.** `--execute` starts a local Jupyter server +
-  websocket on localhost; if loopback is blocked it hangs at "Starting WebSocket".
-  Run the build with the sandbox disabled.
-- Code cells need a `kernelspec` in the page frontmatter (see any chapter).
-- JupyterLite (`project.jupyter.lite: true`) runs Pyodide — keep example deps to
-  packages Pyodide ships (numpy/matplotlib/pandas OK).
-- `project.binder` must be a full URL; exercise/solution use `:class: dropdown`
-  (no sphinx-exercise plugin).
+## Architecture & Two-Tier Execution
+- **Tier 1 (in-book `.md` code cells):** Pure scientific Python (`numpy`, `pandas`, `matplotlib`, `scikit-learn`, `scipy`) using built-in or self-contained biomedical datasets so every chapter executes offline, rapidly, and in-browser via JupyterLite (Pyodide).
+- **Tier 2 (`notebooks/*.ipynb`):** Six GPU/heavyweight Colab companion notebooks (PyTorch neural networks, MedMNIST chest X-ray CNN, Hugging Face clinical LLM next-token probabilities, ESM-2 protein embeddings, fairness/abstention audit, and biomedical capstone starter). Intentionally excluded from `toc.yml` so static builds stay fast.
 
-## House style (see content/1_a1-placeholder.md, the exemplar)
-Per chapter: learning-objectives admonition → concept-through-example → small
-runnable code-cell → exercise + dropdown solution → key takeaways. Audience is
-advanced HS / first-year undergrad: assume algebra, no calculus/linear algebra,
-define every term on first use, warm first-person-plural voice.
+## Pedagogical House Style (PRIMM + Dual Coding)
+- Audience: advanced high-school students and first-year undergraduates (algebra + basic Python; no calculus or linear algebra assumed).
+- Every chapter follows: metadata banner → learning objectives → biomedical story → conceptual diagram (Mermaid) / tabs / margin notes → definitions (also in `back/glossary.md`) → PRIMM interactive code labs (**Predict** before **Run**, then **Investigate**) → real-world clinical/scientific bridge (2024–2026 citations) → tiered exercises (**Modify**, **Make**, **Critical Reasoning**) with `:class: dropdown` solutions → key takeaways & look-ahead.
+- Colorblind-safe Okabe–Ito palette (`#0072B2`, `#D55E00`, `#009E73`, `#E69F00`, `#CC79A7`, `#56B4E9`) across all figures.

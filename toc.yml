@@ -1,24 +1,46 @@
-# Table of contents — edit freely; structure only, no other config here.
-# Parts are a `title:` + `children:`. Chapters are `file:` entries.
-# Filenames carry a numeric prefix for ordering; the URL slug drops it.
-# <!-- PLACEHOLDER --> Rename Parts and chapters to your real curriculum.
+# Table of contents — structure only, extended by myst.yml.
+# Companion GPU/heavy Colab notebooks live under notebooks/*.ipynb and are linked
+# directly from their respective chapters rather than built into the static site.
 version: 1
 project:
   toc:
     - file: index.md
     - file: preface.md
     - file: advice.md
-    - title: 'Part A — PLACEHOLDER'
+    - file: pacing.md
+    - title: 'Part 1 — Data, Uncertainty, and Causality'
       children:
-        - file: content/1_a1-placeholder.md   # ← fully-worked exemplar chapter
-        - file: content/2_a2-placeholder.md
-        - file: content/3_a3-placeholder.md
-    - title: 'Part B — PLACEHOLDER'
+        - file: content/1_1-models-and-outbreaks.md
+        - file: content/1_2-exploring-clinical-data.md
+        - file: content/1_3-correlation-confounding-causation.md
+        - file: content/1_4-probability-and-base-rates.md
+    - title: 'Part 2 — Classical Machine Learning in the Clinic'
       children:
-        - file: content/1_b1-placeholder.md
-        - file: content/2_b2-placeholder.md
+        - file: content/2_1-nearest-neighbors-and-features.md
+        - file: content/2_2-generalization-and-leakage.md
+        - file: content/2_3-clinical-metrics-and-thresholds.md
+        - file: content/2_4-trees-ensembles-and-boundaries.md
+    - title: 'Part 3 — Deep Learning and Medical Imaging'
+      children:
+        - file: content/3_1-loss-and-gradient-descent.md
+        - file: content/3_2-neural-networks-from-scratch.md
+        - file: content/3_3-medical-imaging-and-cnns.md
+        - file: content/3_4-shortcuts-and-failure-modes.md
+    - title: 'Part 4 — Sequences, Language, and Foundation Models'
+      children:
+        - file: content/4_1-dna-proteins-and-alignment.md
+        - file: content/4_2-language-models-and-attention.md
+        - file: content/4_3-hallucination-grounding-rag.md
+        - file: content/4_4-foundation-models-biology.md
+    - title: 'Part 5 — Responsible, Safe, and Equitable Health AI'
+      children:
+        - file: content/5_1-algorithmic-fairness.md
+        - file: content/5_2-privacy-enhancing-tech.md
+        - file: content/5_3-humans-regulation-deployment.md
+        - file: content/5_4-capstone-project.md
     - title: 'Back matter'
       children:
+        - file: back/glossary.md
         - file: back/reproducibility.md
         - file: back/references.md
         - file: back/acknowledgements.md

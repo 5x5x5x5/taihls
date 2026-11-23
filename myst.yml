@@ -5,29 +5,36 @@ extends:
   - toc.yml
 project:
   title: 'TAIHLS — Topics in Artificial Intelligence for Health and Life Sciences'
-  description: An interactive online textbook on AI for health and life sciences, for advanced high-school students and first-year undergraduates.
+  description: An interactive, PRIMM-driven online textbook on artificial intelligence for health and the life sciences, designed for advanced high-school students and first-year undergraduates.
   keywords:
     - artificial intelligence
     - machine learning
     - health
     - life sciences
     - bioinformatics
+    - medical AI
     - undergraduate
     - open education
-  # PLACEHOLDER — replace with the real author(s).
   authors:
-    - name: PLACEHOLDER Author
-      email: placeholder@example.com
+    - name: TAIHLS Contributors
   github: https://github.com/5x5x5x5/taihls
   license:
     content: CC-BY-4.0
     code: MIT
   bibliography:
     - references.bib
-  # In-browser execution via JupyterLite/Pyodide — readers run code with no install.
+  # In-browser execution via JupyterLite / Pyodide — zero install for light code labs.
   jupyter:
     lite: true
-  # Binder "launch" button. The Colab/Binder badges in chapters are other on-ramps.
+  # Binder fallback for full CPython cloud execution.
   binder: https://mybinder.org/v2/gh/5x5x5x5/taihls/HEAD
 site:
   template: book-theme
+  options:
+    favicon: assets/favicon.svg
+    logo: assets/logo-light.svg
+    logo_dark: assets/logo-dark.svg
+    logo_text: TAIHLS
+    logo_alt: TAIHLS DNA and Neural Network Logo
+    style: assets/custom.css
+    outline_maxdepth: 3

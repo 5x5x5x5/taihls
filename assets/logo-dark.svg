@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="TAIHLS logo">
+  <defs>
+    <linearGradient id="helixGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#56B4E9"/>
+      <stop offset="100%" stop-color="#00C49A"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0F172A" stroke="#56B4E9" stroke-width="2.5"/>
+  <path d="M16 14 C 28 14, 36 26, 48 26 C 36 26, 28 38, 16 38 C 28 38, 36 50, 48 50"
+        fill="none" stroke="url(#helixGradDark)" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M48 14 C 36 14, 28 26, 16 26 C 28 26, 36 38, 48 38 C 36 38, 28 50, 16 50"
+        fill="none" stroke="#F59E0B" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <line x1="21" y1="20" x2="43" y2="20" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+  <line x1="21" y1="32" x2="43" y2="32" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+  <line x1="21" y1="44" x2="43" y2="44" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="16" cy="14" r="4" fill="#56B4E9"/>
+  <circle cx="48" cy="14" r="4" fill="#F59E0B"/>
+  <circle cx="16" cy="26" r="3.5" fill="#F59E0B"/>
+  <circle cx="48" cy="26" r="3.5" fill="#00C49A"/>
+  <circle cx="16" cy="38" r="3.5" fill="#56B4E9"/>
+  <circle cx="48" cy="38" r="3.5" fill="#F59E0B"/>
+  <circle cx="16" cy="50" r="4" fill="#F59E0B"/>
+  <circle cx="48" cy="50" r="4" fill="#00C49A"/>
+</svg>

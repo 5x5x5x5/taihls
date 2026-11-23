@@ -1,6 +1,11 @@
-# For cloud runners (Binder / Colab) that can't read pyproject.toml.
+# Execution dependencies for cloud runners (Binder) that cannot read pyproject.toml.
 # The pinned source of truth is pyproject.toml + uv.lock; keep these in sync.
-# Only the packages the code-cells need to execute — all Pyodide-compatible.
-jupyter-book>=2
-matplotlib
-ipykernel
+# Light tier only — all packages below ship in Pyodide (JupyterLite) too.
+# Heavy GPU libraries (torch, transformers, medmnist) are installed inside notebooks/*.ipynb.
+jupyter-book>=2.1.7
+ipykernel>=7.3.0
+matplotlib>=3.11.0
+numpy>=2.0.0
+pandas>=3.0.0
+scikit-learn>=1.8.0
+scipy>=1.15.0
